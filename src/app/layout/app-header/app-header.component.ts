@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router'; 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [RouterModule], 
   template: `
     <header class="main-header">
-      <div class="logo">GARAGE</div>
+      <a routerLink="/" class="logo">GARAGE</a>
       <nav class="main-nav">
-        <a href="#">Inventory</a>
+        <a routerLink="/collection">Inventory</a>
         <a href="#">About Us</a>
         <a href="#">Contact</a>
       </nav>

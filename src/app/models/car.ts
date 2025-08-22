@@ -5,4 +5,7 @@ export interface Car {
   year: number;
   price: number;
   imageUrl: string;
+  horsepower: number;
+  topSpeed: number;
+  zeroToSixty: number;
 }

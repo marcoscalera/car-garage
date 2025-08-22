@@ -1,20 +1,37 @@
-<div class="detail-container" *ngIf="car$ | async as car">
-  <div class="image-panel">
-    <img [src]="car.imageUrl" [alt]="car.model">
-  </div>
-  <div class="info-panel">
-    <h1 class="brand">{{ car.brand }}</h1>
-    <h2 class="model">{{ car.model }}</h2>
-    <div class="specs">
-      <div class="spec-item">
-        <span>Year</span>
-        <strong>{{ car.year }}</strong>
+<ng-container *ngIf="car$ | async as car">
+  <div class="background-panel" [style.backgroundImage]="'url(' + car.imageUrl + ')'"></div>
+
+  <div class="content-container">
+    <div class="info-card">
+      <div class="header">
+        <span class="brand">{{ car.brand }}</span>
+        <h1 class="model">{{ car.model }}</h1>
       </div>
-      <div class="spec-item">
-        <span>Price</span>
-        <strong>{{ car.price | currency:'USD':'symbol':'1.0-0' }}</strong>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="label">Horsepower</span>
+          <strong class="value">{{ car.horsepower }} hp</strong>
+        </div>
+        <div class="stat-item">
+          <span class="label">Top Speed</span>
+          <strong class="value">{{ car.topSpeed }} km/h</strong>
+        </div>
+        <div class="stat-item">
+          <span class="label">0-100 km/h</span>
+          <strong class="value">{{ car.zeroToSixty }} s</strong>
+        </div>
+      </div>
+
+      <div class="price-section">
+        <span class="label">Price</span>
+        <strong class="value">{{ car.price | currency:'USD':'symbol':'1.0-0' }}</strong>
+      </div>
+
+      <div class="actions">
+        <a class="enquire-button">Enquire Now</a>
+        <a routerLink="/collection" class="back-link">Back to Collection</a>
       </div>
     </div>
-    <a routerLink="/collection" class="back-button">Back to Collection</a>
   </div>
-</div>
+</ng-container>

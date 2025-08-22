@@ -1,10 +1,20 @@
-<div class="collection-header">
-  <h1>The Collection</h1>
-</div>
-<div class="car-list-container">
-  @for (car of cars; track car.id) {
-    <a [routerLink]="['/collection', car.id]" class="card-link">
-      <app-car-card [car]="car"></app-car-card>
-    </a>
-  }
+<div class="collection-container">
+  <div class="collection-header">
+    <h1>The Apex Collection</h1>
+    <p>An unparalleled selection of automotive icons, curated for the discerning connoisseur.</p>
+  </div>
+
+  <app-featured-car-card [car]="starCar"></app-featured-car-card>
+
+  <div class="grid-header">
+    <h2>Available Inventory</h2>
+  </div>
+
+  <div class="car-list-container">
+    @for (car of otherCars; track car.id) {
+      <a [routerLink]="['/collection', car.id]" class="card-link">
+        <app-car-card [car]="car"></app-car-card>
+      </a>
+    }
+  </div>
 </div>

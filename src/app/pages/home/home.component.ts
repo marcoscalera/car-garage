@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   constructor(private carService: CarService) {}
 
   ngOnInit(): void {
-    this.carService.getCars().subscribe(cars => {
+    this.carService.getFeaturedCars().subscribe(cars => {
       this.featuredCars = cars;
     });
   }

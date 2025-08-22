@@ -3,18 +3,41 @@
   animation: fadeIn 0.8s ease-in-out;
 }
 
+.collection-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
 .collection-header {
   text-align: center;
-  padding: 4rem 2rem 2rem 2rem;
+  margin-bottom: 4rem;
 }
 
 .collection-header h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.collection-header p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid-header {
+  text-align: center;
+  padding: 5rem 0 3rem 0;
+  font-size: 1.8rem;
   font-weight: 500;
+  color: var(--text-primary);
+  border-top: 1px solid var(--border-color);
+  margin-top: 5rem;
 }
 
 .card-link {
   text-decoration: none;
   color: inherit;
-  display: block;
 }

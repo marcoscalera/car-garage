@@ -1,0 +1,12 @@
+<div class="featured-card-container" *ngIf="car">
+  <div class="image-panel">
+    <img [src]="car.imageUrl" [alt]="car.model">
+  </div>
+  <div class="info-panel">
+    <span class="highlight-tag">Flagship Vehicle</span>
+    <h1 class="brand">{{ car.brand }}</h1>
+    <h2 class="model">{{ car.model }}</h2>
+    <p class="price">{{ car.price | currency:'USD':'symbol':'1.0-0' }}</p>
+    <a [routerLink]="['/collection', car.id]" class="details-button">View Details</a>
+  </div>
+</div>
