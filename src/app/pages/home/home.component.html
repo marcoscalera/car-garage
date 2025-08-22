@@ -1,0 +1,28 @@
+<div class="hero-container">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Engineering as an Art Form.</h1>
+    <p class="hero-subtitle">We don't sell cars. We curate legacies.</p>
+  </div>
+</div>
+
+<section class="content-section philosophy">
+  <div class="content-wrapper">
+    <h2>Our Philosophy</h2>
+    <p>GARAGE is not a dealership; it is a sanctuary for automotive masterpieces. We believe in a standard of excellence defined by unparalleled performance, visionary design, and historical significance. Each vehicle in our collection is a testament to this belief.</p>
+  </div>
+</section>
+
+<section class="content-section featured-collection">
+  <div class="content-wrapper">
+    <h2>Featured Collection</h2>
+    <div class="car-list-container">
+      @for (car of featuredCars; track car.id) {
+        <a [routerLink]="['/collection', car.id]" class="card-link">
+          <app-car-card [car]="car"></app-car-card>
+        </a>
+      }
+    </div>
+    <a routerLink="/collection" class="cta-button">View Full Collection</a>
+  </div>
+</section>

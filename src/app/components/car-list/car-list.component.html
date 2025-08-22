@@ -1,0 +1,8 @@
+<section class="collection-container">
+  <h2 class="collection-title">The Collection</h2>
+  <div class="car-list-container">
+    @for (car of cars; track car.id) {
+      <app-car-card [car]="car"></app-car-card>
+    }
+  </div>
+</section>

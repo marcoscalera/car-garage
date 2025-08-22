@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.collection-header {
+  text-align: center;
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.collection-header h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

@@ -1,0 +1,10 @@
+<div class="collection-header">
+  <h1>The Collection</h1>
+</div>
+<div class="car-list-container">
+  @for (car of cars; track car.id) {
+    <a [routerLink]="['/collection', car.id]" class="card-link">
+      <app-car-card [car]="car"></app-car-card>
+    </a>
+  }
+</div>

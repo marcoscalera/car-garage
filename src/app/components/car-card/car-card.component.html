@@ -1,0 +1,10 @@
+<div class="card-image-container">
+  <img class="card-image" [src]="car.imageUrl" [alt]="car.brand + ' ' + car.model">
+</div>
+<div class="card-content">
+  <div>
+    <h3 class="card-brand">{{ car.brand }}</h3>
+    <p class="card-model">{{ car.model }}</p>
+  </div>
+  <p class="card-price">{{ car.price | currency:'USD':'symbol':'1.0-0' }}</p>
+</div>

@@ -1,0 +1,20 @@
+<div class="detail-container" *ngIf="car$ | async as car">
+  <div class="image-panel">
+    <img [src]="car.imageUrl" [alt]="car.model">
+  </div>
+  <div class="info-panel">
+    <h1 class="brand">{{ car.brand }}</h1>
+    <h2 class="model">{{ car.model }}</h2>
+    <div class="specs">
+      <div class="spec-item">
+        <span>Year</span>
+        <strong>{{ car.year }}</strong>
+      </div>
+      <div class="spec-item">
+        <span>Price</span>
+        <strong>{{ car.price | currency:'USD':'symbol':'1.0-0' }}</strong>
+      </div>
+    </div>
+    <a routerLink="/collection" class="back-button">Back to Collection</a>
+  </div>
+</div>
